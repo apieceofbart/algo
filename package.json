@@ -1,12 +1,12 @@
 {
-  "name": "typescript-template",
+  "name": "algo",
   "version": "1.0.0",
-  "description": "Template for typescript node projects",
+  "description": "Implementing algorithms using typescript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "mocha -r ts-node/register test/index.ts"
+    "test": "mocha -r ts-node/register test/*.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.2.22",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apieceofbart/typescript-template.git"
+    "url": "git+https://github.com/apieceofbart/algo.git"
   },
   "keywords": [
     "typecript",
@@ -28,7 +28,7 @@
   "author": "Bartek Kozera",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/apieceofbart/typescript-template/issues"
+    "url": "https://github.com/apieceofbart/algo/issues"
   },
-  "homepage": "https://github.com/apieceofbart/typescript-template#readme"
+  "homepage": "https://github.com/apieceofbart/algo#readme"
 }
