@@ -1,6 +1,5 @@
 import { sayHello } from "../src/index";
 import * as chai from "chai";
-import "mocha";
 const { expect } = chai;
 
 it('should say "Hello World!', () => {

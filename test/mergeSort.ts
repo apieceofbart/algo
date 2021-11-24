@@ -1,6 +1,5 @@
 import { mergeSort } from "../src/mergeSort";
 import * as chai from "chai";
-import "mocha";
 const { expect } = chai;
 
 it("should return empty array", () => {
