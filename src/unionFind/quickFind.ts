@@ -1,6 +1,8 @@
 // https://www.coursera.org/learn/algorithms-part1/lecture/EcF3P/quick-find
 
-export class QuickFind {
+import { AbstractQuickFindClass } from "./types";
+
+export class QuickFind implements AbstractQuickFindClass {
   id: number[] = [];
   constructor(n: number) {
     for (let i = 0; i < n; i++) {
