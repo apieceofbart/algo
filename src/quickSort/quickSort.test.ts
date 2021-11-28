@@ -1,4 +1,4 @@
-import { quickSort, quickSortInPlace } from "../src/quickSort";
+import { quickSort, quickSortInPlace } from "./quickSort";
 import * as chai from "chai";
 const { expect } = chai;
 

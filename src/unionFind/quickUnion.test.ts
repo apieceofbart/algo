@@ -1,4 +1,4 @@
-import { QuickUnion } from "../src/quickUnion";
+import { QuickUnion } from "./quickUnion";
 import * as chai from "chai";
 const { expect } = chai;
 

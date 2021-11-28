@@ -1,4 +1,4 @@
-import { mergeSort } from "../src/mergeSort";
+import { mergeSort } from "./mergeSort";
 import * as chai from "chai";
 const { expect } = chai;
 describe("merge sort", () => {

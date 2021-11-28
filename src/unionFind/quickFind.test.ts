@@ -1,4 +1,4 @@
-import { QuickFind } from "../src/quickFind";
+import { QuickFind } from "./quickFind";
 import * as chai from "chai";
 const { expect } = chai;
 describe("quick find", () => {
