@@ -23,14 +23,13 @@ async function main() {
       per.open(x, y);
       per.drawGrid();
       await sleep(100);
-      if (i !== sitesToOpen) {
-        console.clear();
-      }
+      console.clear();
       i++;
     }
   }
-
-  console.log(per.percolates());
+  per.runFlow();
+  per.drawGrid();
+  console.log("Does it percolate?", per.percolates());
 }
 
 main();

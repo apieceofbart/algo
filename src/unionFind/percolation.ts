@@ -21,6 +21,7 @@ export class Percolation {
   n: number;
   grid: SiteState[][];
   unionFind: UnionFind;
+  didYouRunTheFlow: boolean = false;
   constructor(n: number) {
     if (n <= 0) {
       throw new Error("n must be greater than 0");
@@ -99,8 +100,10 @@ export class Percolation {
     return this.grid[row][col] === "open";
   }
 
-  // I never use this
   public isFull(row: number, col: number): boolean {
+    if (!this.didYouRunTheFlow) {
+      throw Error("You have to run the flow first!");
+    }
     this.validate(row, col);
     return this.grid[row][col] === "full";
   }
@@ -117,8 +120,19 @@ export class Percolation {
     return openSites;
   }
 
+  public runFlow(): void {
+    for (let i = 1; i <= this.n * this.n; i++) {
+      const [row, col] = this.indexToCoordinates(i);
+      if (this.unionFind.connected(0, i) && this.grid[row][col] === "open") {
+        this.grid[row][col] = "full";
+      }
+    }
+    this.didYouRunTheFlow = true;
+  }
+
   percolates(): boolean {
     return this.unionFind.connected(0, this.n * this.n + 1);
+    // or we could run the flow and check if any of the bottom row is full
   }
 
   drawGrid(): void {
