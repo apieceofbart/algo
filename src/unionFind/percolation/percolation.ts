@@ -1,6 +1,6 @@
 // https://coursera.cs.princeton.edu/algs4/assignments/percolation/specification.php
 
-import { QuickUnionOptimized as UnionFind } from "./quickUnionOptimized";
+import { QuickUnionOptimized as UnionFind } from "../quickUnionOptimized";
 
 type SiteState = "blocked" | "open" | "full";
 

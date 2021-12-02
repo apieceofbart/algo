@@ -15,8 +15,7 @@ const sitesToOpen = 13;
 
 async function main() {
   console.clear();
-  let i = 1;
-  while (per.numberOfOpenSites() < sitesToOpen) {
+  while (!per.percolates()) {
     const x = getRandomInt(n);
     const y = getRandomInt(n);
     if (!per.isOpen(x, y)) {
@@ -24,12 +23,11 @@ async function main() {
       per.drawGrid();
       await sleep(100);
       console.clear();
-      i++;
     }
   }
-  per.runFlow();
+  // per.runFlow();
   per.drawGrid();
-  console.log("Does it percolate?", per.percolates());
+  console.log(per.numberOfOpenSites());
 }
 
 main();
